@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aurora — Modern Web Studio</title>
+  <meta name="description" content="Aurora is a modern web studio delivering beautiful, fast, and accessible websites." />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%23a78bfa'/%3E%3Cstop offset='1' stop-color='%236ee7b7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='12' fill='url(%23g)'/%3E%3Cpath d='M18 40c8-16 20-16 28 0' stroke='%23fff' stroke-width='6' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='23' cy='24' r='4' fill='%23fff'/%3E%3Ccircle cx='41' cy='24' r='4' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="aurora.css" />
+</head>
+
+<body>
+  <!-- ========== NAVBAR ========== -->
+  <header class="nav">
+    <div class="container nav-inner" role="navigation" aria-label="Primary">
+      <a class="logo" href="#home" aria-label="Aurora Home">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#34d399"/>
+            </linearGradient>
+          </defs>
+          <path d="M3 17c4-8 10-8 14 0" stroke="url(#g1)" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="7" cy="8" r="2" fill="url(#g1)"/>
+          <circle cx="15" cy="8" r="2" fill="url(#g1)"/>
+        </svg>
+        <span>Aurora</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#features">Features</a>
+        <a href="#work">Work</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-ctas">
+        <button class="btn outline" id="themeBtn" aria-label="Toggle theme">
+          <span class="theme-toggle">
+            <svg id="icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path stroke="currentColor" stroke-width="2" d="M12 4v2m0 12v2m8-8h-2M6 12H4m12.95 5.657-1.415-1.414M6.464 7.05 5.05 5.636m13.9 0-1.414 1.414M6.464 16.95 5.05 18.364"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/></svg>
+            <svg id="icon-moon" viewBox="0 0 24 24" fill="none" hidden aria-hidden="true"><path stroke="currentColor" stroke-width="2" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+          </span>
+        </button>
+        <a class="btn" href="#contact">Get Started</a>
+        <button class="burger" id="burger" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <main id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="stack">
+        <span class="tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2v20M2 12h20" stroke="currentColor" stroke-width="2"/></svg> New: Aurora v1.0</span>
+        <h1>Design. Build. <span style="background:linear-gradient(90deg,#8b5cf6,#06b6d4,#34d399);-webkit-background-clip:text;background-clip:text;color:transparent">Delight</span>.</h1>
+        <p class="lead">We craft blazing‑fast, accessible websites that convert. From concept to launch, our studio handles it all.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#pricing" style="--bgc:linear-gradient(90deg,#8b5cf6,#34d399)">View Plans</a>
+          <a class="btn outline" href="#work">See Work</a>
+        </div>
+        <div class="stats">
+          <div class="stat glass"><b>220+</b><div>Projects shipped</div></div>
+          <div class="stat glass"><b>98%</b><div>Client satisfaction</div></div>
+          <div class="stat glass"><b>0.9s</b><div>Avg. LCP</div></div>
+        </div>
+      </div>
+
+      <div class="hero-media reveal" aria-hidden="true">
+        <div class="hero-badge">⚡ Performance First</div>
+        <svg viewBox="0 0 600 380" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" role="img" aria-label="Decorative abstract waves">
+          <defs>
+            <linearGradient id="lgA" x1="0" y1="0" x2="1" y2="1">
+              <stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#34d399"/>
+            </linearGradient>
+          </defs>
+          <g opacity=".8">
+            <path d="M0 200 C 120 120, 240 280, 360 200 S 600 120, 600 120" fill="none" stroke="url(#lgA)" stroke-width="10" stroke-linecap="round"/>
+            <path d="M0 260 C 120 180, 240 340, 360 260 S 600 180, 600 180" fill="none" stroke="url(#lgA)" stroke-width="6" stroke-linecap="round" opacity=".6"/>
+          </g>
+          <g opacity=".25">
+            <circle cx="520" cy="80" r="44" fill="url(#lgA)"/>
+            <rect x="40" y="40" rx="14" width="120" height="60" fill="url(#lgA)"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </main>
+
+  <!-- ========== FEATURES ========== -->
+  <section id="features">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Why Aurora</div>
+          <h2>Beautiful by default, fast by design</h2>
+        </div>
+        <a class="btn ghost" href="#work">Explore our work →</a>
+      </div>
+
+      <div class="feature-grid">
+        <article class="card reveal">
+          <div class="icon" aria-hidden="true">⚙️</div>
+          <h3>Engineered for speed</h3>
+          <p>Clean, minimal bundle sizes with best practices: lazy loading, preconnects, and semantic HTML.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon" aria-hidden="true">🧩</div>
+          <h3>Accessible components</h3>
+          <p>Every interactive element is keyboard‑friendly and screen‑reader aware from the start.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon" aria-hidden="true">🛡️</div>
+          <h3>Robust & secure</h3>
+          <p>Defense‑in‑depth UI patterns with graceful failure states and form validation that just works.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SHOWCASE ========== -->
+  <section id="work">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Selected Work</div>
+          <h2>Projects we’re proud of</h2>
+        </div>
+        <a class="btn outline" href="#contact">Start a project</a>
+      </div>
+
+      <div class="work-grid">
+        <article class="work big reveal" aria-labelledby="w1-title">
+          <div class="thumb" role="img" aria-label="Colorful dashboard preview">
+            <!-- Placeholder dashboard blocks -->
+            <svg viewBox="0 0 800 500" width="100%" height="100%">
+              <defs>
+                <linearGradient id="lgB" x1="0" y1="0" x2="1" y2="1">
+                  <stop stop-color="#22d3ee"/><stop offset="1" stop-color="#8b5cf6"/>
+                </linearGradient>
+              </defs>
+              <rect x="30" y="30" width="740" height="150" rx="16" fill="url(#lgB)" opacity=".35"/>
+              <rect x="30" y="200" width="360" height="270" rx="16" fill="url(#lgB)" opacity=".25"/>
+              <rect x="410" y="200" width="360" height="270" rx="16" fill="url(#lgB)" opacity=".25"/>
+              <circle cx="120" cy="110" r="28" fill="url(#lgB)"/>
+              <rect x="170" y="92" width="140" height="20" rx="8" fill="url(#lgB)"/>
+            </svg>
+          </div>
+          <div class="meta">
+            <div>
+              <h3 id="w1-title">Nova Analytics</h3>
+              <p class="muted" style="color:var(--muted)">Realtime dashboard • Next.js + D3</p>
+            </div>
+            <span class="chip">Case Study</span>
+          </div>
+        </article>
+
+        <article class="work reveal">
+          <div class="thumb" role="img" aria-label="E‑commerce product tiles">
+            <svg viewBox="0 0 800 500" width="100%" height="100%">
+              <rect x="40" y="40" width="200" height="200" rx="16" fill="#8b5cf6" opacity=".35"/>
+              <rect x="280" y="40" width="200" height="200" rx="16" fill="#06b6d4" opacity=".35"/>
+              <rect x="520" y="40" width="200" height="200" rx="16" fill="#34d399" opacity=".35"/>
+              <rect x="40" y="270" width="320" height="180" rx="16" fill="#34d399" opacity=".2"/>
+              <rect x="380" y="270" width="340" height="180" rx="16" fill="#8b5cf6" opacity=".2"/>
+            </svg>
+          </div>
+          <div class="meta">
+            <div><h3>Atlas Commerce</h3><p class="muted" style="color:var(--muted)">Storefront revamp • 34% CR ↑</p></div>
+            <span class="chip">E‑commerce</span>
+          </div>
+        </article>
+
+        <article class="work reveal">
+          <div class="thumb" role="img" aria-label="Marketing landing blocks">
+            <svg viewBox="0 0 800 500" width="100%" height="100%">
+              <rect x="40" y="40" width="720" height="120" rx="18" fill="#22d3ee" opacity=".25"/>
+              <rect x="40" y="180" width="340" height="260" rx="18" fill="#8b5cf6" opacity=".25"/>
+              <rect x="400" y="180" width="360" height="260" rx="18" fill="#34d399" opacity=".25"/>
+            </svg>
+          </div>
+          <div class="meta">
+            <div><h3>Pulse Cloud</h3><p class="muted" style="color:var(--muted)">B2B SaaS • Brand + site</p></div>
+            <span class="chip">SaaS</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS (MARQUEE) ========== -->
+  <section aria-labelledby="testimonials-title">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="kicker">In their words</div>
+          <h2 id="testimonials-title">Loved by teams of all sizes</h2>
+        </div>
+        <div class="cluster">
+          <span class="chip">5.0 ★ on Clutch</span>
+        </div>
+      </div>
+
+      <div class="marquee" role="list" aria-label="Client testimonials">
+        <div class="rail">
+          <article class="card quote" role="listitem">
+            <p class="body">“Aurora shipped our MVP in record time without compromising quality.”</p>
+            <div class="avatar">
+              <img alt="" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=120&auto=format&fit=crop" loading="lazy">
+              <div><strong>Samira Q.</strong><div class="muted" style="color:var(--muted)">CTO, Vectra</div></div>
+            </div>
+          </article>
+          <article class="card quote" role="listitem">
+            <p class="body">“Our conversion rate jumped 34% after their redesign. Highly recommended.”</p>
+            <div class="avatar">
+              <img alt="" src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=120&auto=format&fit=crop" loading="lazy">
+              <div><strong>Diego M.</strong><div class="muted" style="color:var(--muted)">Head of Growth, Atlas</div></div>
+            </div>
+          </article>
+          <article class="card quote" role="listitem">
+            <p class="body">“A++ accessibility and performance. Lighthouse 100s across the board.”</p>
+            <div class="avatar">
+              <img alt="" src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=120&auto=format&fit=crop" loading="lazy">
+              <div><strong>Grace K.</strong><div class="muted" style="color:var(--muted)">PM, Nova</div></div>
+            </div>
+          </article>
+          <!-- duplicates for seamless loop -->
+          <article class="card quote" role="listitem" aria-hidden="true">
+            <p class="body">“Aurora shipped our MVP in record time without compromising quality.”</p>
+            <div class="avatar">
+              <img alt="" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=120&auto=format&fit=crop" loading="lazy">
+              <div><strong>Samira Q.</strong><div class="muted" style="color:var(--muted)">CTO, Vectra</div></div>
+            </div>
+          </article>
+          <article class="card quote" role="listitem" aria-hidden="true">
+            <p class="body">“Our conversion rate jumped 34% after their redesign. Highly recommended.”</p>
+            <div class="avatar">
+              <img alt="" src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=120&auto=format&fit=crop" loading="lazy">
+              <div><strong>Diego M.</strong><div class="muted" style="color:var(--muted)">Head of Growth, Atlas</div></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRICING ========== -->
+  <section id="pricing" aria-labelledby="pricing-title">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Transparent Pricing</div>
+          <h2 id="pricing-title">Choose a plan that grows with you</h2>
+        </div>
+        <div class="cluster">
+          <span class="chip">No hidden fees</span>
+          <span class="chip">Cancel anytime</span>
+        </div>
+      </div>
+
+      <div class="pricing">
+        <article class="card price-card reveal" aria-labelledby="starter-title">
+          <span class="badge chip">Starter</span>
+          <h3 id="starter-title">Starter</h3>
+          <p class="price">$1,200 <span class="muted" style="color:var(--muted)">/ project</span></p>
+          <ul class="features" role="list">
+            <li><svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Landing page (1 sectioned page)</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Basic analytics & SEO</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 2 weeks delivery</li>
+          </ul>
+          <a class="btn" href="#contact">Choose Starter</a>
+        </article>
+
+        <article class="card price-card reveal" style="border:2px solid color-mix(in oklab, var(--primary), transparent 40%)" aria-labelledby="growth-title">
+          <span class="badge chip">Popular</span>
+          <h3 id="growth-title">Growth</h3>
+          <p class="price">$3,600 <span class="muted" style="color:var(--muted)">/ project</span></p>
+          <ul class="features" role="list">
+            <li><svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Multi‑page site (up to 6)</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> CMS integration</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Performance budgets</li>
+          </ul>
+          <a class="btn" href="#contact" style="--bgc:linear-gradient(90deg,#8b5cf6,#06b6d4)">Choose Growth</a>
+        </article>
+
+        <article class="card price-card reveal" aria-labelledby="enterprise-title">
+          <span class="badge chip">Custom</span>
+          <h3 id="enterprise-title">Enterprise</h3>
+          <p class="price">Let’s chat</p>
+          <ul class="features" role="list">
+            <li><svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Complex web apps</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Design systems</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Ongoing support & SLA</li>
+          </ul>
+          <a class="btn outline" href="#contact">Book Discovery</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Get in touch</div>
+          <h2 id="contact-title">Tell us about your project</h2>
+        </div>
+        <p class="muted" style="max-width:520px;color:var(--muted)">We respond within one business day. Your info stays private—no spam, ever.</p>
+      </div>
+
+      <form id="contactForm" novalidate class="card">
+        <div class="field">
+          <label for="name">Full name</label>
+          <input id="name" name="name" autocomplete="name" placeholder="Ada Lovelace" required />
+          <small id="nameHelp" class="error" aria-live="polite"></small>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required />
+          <small id="emailHelp" class="error" aria-live="polite"></small>
+        </div>
+        <div class="field">
+          <label for="budget">Budget</label>
+          <select id="budget" name="budget" required>
+            <option value="">Select a range…</option>
+            <option value="1200-3600">$1,200 – $3,600</option>
+            <option value="3600-10000">$3,600 – $10,000</option>
+            <option value="10000+">$10,000+</option>
+          </select>
+          <small id="budgetHelp" class="error" aria-live="polite"></small>
+        </div>
+        <div class="field">
+          <label for="message">Project details</label>
+          <textarea id="message" name="message" rows="5" placeholder="What are you building?" required></textarea>
+          <small id="messageHelp" class="error" aria-live="polite"></small>
+        </div>
+
+        <div class="cluster" style="justify-content:space-between">
+          <label class="cluster" style="gap:.4rem">
+            <input type="checkbox" id="consent" required />
+            <span>I agree to the <a href="#" class="underline">privacy policy</a>.</span>
+          </label>
+          <button class="btn" type="submit">Send message</button>
+        </div>
+
+        <p id="formStatus" role="status" class="center" style="margin-top:.6rem"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="container foot">
+      <div class="cluster">
+        <a class="logo" href="#home" aria-label="Back to top">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#34d399"/></linearGradient></defs>
+            <path d="M3 17c4-8 10-8 14 0" stroke="url(#g2)" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="7" cy="8" r="2" fill="url(#g2)"/>
+            <circle cx="15" cy="8" r="2" fill="url(#g2)"/>
+          </svg>
+          <span>Aurora</span>
+        </a>
+        <span>© <span id="year"></span> Aurora Studio. All rights reserved.</span>
+      </div>
+      <div class="cluster social">
+        <a href="#" aria-label="Twitter" title="Twitter">𝕏</a>
+        <a href="#" aria-label="GitHub" title="GitHub">GH</a>
+        <a href="#" aria-label="Dribbble" title="Dribbble">Dr</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script>
+    // Utilities
+    const $ = (sel, scope = document) => scope.querySelector(sel);
+    const $$ = (sel, scope = document) => Array.from(scope.querySelectorAll(sel));
+
+    // Year
+    $('#year').textContent = new Date().getFullYear();
+
+    // Theme Toggle with persistence
+    const themeBtn = $('#themeBtn');
+    const root = document.documentElement;
+    const applyTheme = (t)=> {
+      root.classList.toggle('theme-dark', t === 'dark');
+      root.classList.toggle('theme-light', t === 'light');
+      $('#icon-sun').hidden = t !== 'light';
+      $('#icon-moon').hidden = t !== 'dark';
+      localStorage.setItem('aurora-theme', t);
+      themeBtn.setAttribute('aria-label', `Switch to ${t === 'light' ? 'dark' : 'light'} theme`);
+    };
+    // initial
+    const storedTheme = localStorage.getItem('aurora-theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    applyTheme(storedTheme || (prefersDark ? 'dark' : 'light'));
+    // toggle
+    themeBtn.addEventListener('click', ()=> applyTheme(root.classList.contains('theme-dark') ? 'light' : 'dark'));
+
+    // Mobile nav
+    const burger = $('#burger');
+    const navLinks = $('#navLinks');
+    const closeNav = () => { navLinks.classList.remove('open'); burger.setAttribute('aria-expanded','false'); };
+    burger.addEventListener('click', ()=>{
+      const open = !navLinks.classList.contains('open');
+      navLinks.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', String(open));
+    });
+    $$('a[href^="#"]').forEach(a=> a.addEventListener('click', closeNav));
+
+    // Reveal on scroll (IntersectionObserver)
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold: .12});
+    $$('.reveal').forEach(el=> io.observe(el));
+
+    // Contact form validation (client-side only demo)
+    const form = $('#contactForm');
+    const fields = {
+      name: { el: $('#name'), help: $('#nameHelp'), rule: v=> v.trim().length >= 2 || 'Please enter your full name.' },
+      email: { el: $('#email'), help: $('#emailHelp'), rule: v=> /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) || 'Enter a valid email.' },
+      budget: { el: $('#budget'), help: $('#budgetHelp'), rule: v=> v !== '' || 'Select a budget.' },
+      message: { el: $('#message'), help: $('#messageHelp'), rule: v=> v.trim().length >= 10 || 'Tell us a bit more (min 10 chars).' },
+      consent: { el: $('#consent'), help: null, rule: v=> v === true || 'You must agree to continue.' }
+    };
+    const showError = (key, msg)=>{
+      const f = fields[key];
+      if(f.help){ f.help.textContent = typeof msg === 'string' ? msg : ''; }
+      f.el.setAttribute('aria-invalid', msg === true ? 'false' : 'true');
+    };
+    Object.keys(fields).forEach(key=>{
+      const f = fields[key];
+      const handler = ()=>{
+        const res = f.rule(f.el.type === 'checkbox' ? f.el.checked : f.el.value);
+        showError(key, res === true);
+      };
+      f.el.addEventListener('input', handler);
+      f.el.addEventListener('blur', handler);
+      if(f.el.type === 'checkbox') f.el.addEventListener('change', handler);
+    });
+
+    form.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      let valid = true;
+      for(const key of Object.keys(fields)){
+        const f = fields[key];
+        const res = f.rule(f.el.type === 'checkbox' ? f.el.checked : f.el.value);
+        if(res !== true){ valid = false; showError(key, res); } else { showError(key, true); }
+      }
+      const status = $('#formStatus');
+      if(!valid){ status.textContent = 'Please fix the highlighted fields.'; status.style.color = '#ef4444'; return; }
+
+      // Simulate async submit
+      const payload = {
+        name: fields.name.el.value,
+        email: fields.email.el.value,
+        budget: fields.budget.el.value,
+        message: fields.message.el.value,
+        consent: fields.consent.el.checked
+      };
+      status.textContent = 'Sending…';
+      status.style.color = 'var(--muted)';
+      await new Promise(r=> setTimeout(r, 900));
+      // In a real app, send with fetch:
+      // await fetch('/api/contact', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload)});
+
+      status.textContent = 'Thanks! We’ll be in touch shortly.';
+      status.style.color = 'var(--accent)';
+      form.reset();
+      fields.consent.el.checked = false;
+    });
+
+    // Accessibility: set aria-current for in-view section
+    const sections = $$('main, section[id]');
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          const id = entry.target.getAttribute('id');
+          if(!id) return;
+          $$('.nav-links a').forEach(a=> a.removeAttribute('aria-current'));
+          const active = $(`.nav-links a[href="#${id}"]`);
+          if(active) active.setAttribute('aria-current','page');
+        }
+      });
+    }, {rootMargin: '-50% 0px -49% 0px'});
+    sections.forEach(sec=> observer.observe(sec));
+  </script>
+</body>
+</html>
